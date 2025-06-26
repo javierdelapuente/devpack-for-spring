@@ -16,8 +16,8 @@ jobs:
   snapcraft-build:
     strategy:
       matrix:
-        arch: [x64, arm64]
-    runs-on: [self-hosted, large, "${{ inputs.arch }}"]
+        arch: [ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ["${{ inputs.arch }}"]
     steps:
       - uses: actions/checkout@v4
         id: checkout
