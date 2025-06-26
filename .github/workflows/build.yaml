@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         arch: [ubuntu-latest, ubuntu-24.04-arm]
-    runs-on: ["${{ inputs.arch }}"]
+    runs-on: "${{ inputs.arch }}"
     steps:
       - uses: actions/checkout@v4
         id: checkout
